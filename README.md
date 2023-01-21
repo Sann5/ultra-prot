@@ -25,4 +25,5 @@ Check [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 Check [SUPPORT.md](.github/SUPPORT.md).
 
 ## Credits
+
 This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html)
