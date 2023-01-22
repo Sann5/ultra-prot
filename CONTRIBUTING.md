@@ -24,5 +24,6 @@ Once you have submitted your PR:
 
 ## Code style and format
 
-This repo uses pre-commit hooks to style and format the code automatically ([black](https://github.com/psf/black) and [pre-commit hooks](https://github.com/pre-commit/pre-commit-hooks)). Please consider using [flake8](https://github.com/pycqa/flake8) and [mypy](https://github.com/python/mypy) for additional formating and static type checking. All of these tools are considered dependencies and are therefore included in the `environment.yml`.
+- This repo uses pre-commit hooks to style and format the code automatically ([black](https://github.com/psf/black) and [pre-commit hooks](https://github.com/pre-commit/pre-commit-hooks)). Please consider using [flake8](https://github.com/pycqa/flake8) and [mypy](https://github.com/python/mypy) for additional formating and static type checking. All of these tools are considered dependencies and are therefore included in the `environment.yml`.
+- Please comment and add Google style docstrings where applicable (example of [Google style docstrings](https://github.com/sphinx-contrib/napoleon/blob/83bf1963096490dd666f93ef5a9ed1cb229fc3ec/docs/source/example_google.py#L66)).
   
