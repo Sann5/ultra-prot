@@ -28,4 +28,12 @@ rule preprocess_transcriptomic_study_2:
         "data/preprocessed/transcriptomic/GSM4226257_out_gene_exon_tagged.h5ad"
     script:
         "src/preprocess_transcriptomic_study_2.py"
+
+rule fig_4c:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_notnormalized.h5ad"
+    output:
+        "results/fig_4c.png"
+    script:
+        "src/fig_4c.py"
         
