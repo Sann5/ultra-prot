@@ -1,4 +1,4 @@
-# 🧬 🧪 Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis  💻  🔬
+# Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪
 
 This repository contains a **reproduction** of the analysis made in [Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation](https://doi.org/10.15252/msb.202110798), A Brunner, ..., M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the ascoiated GitHub [repository](https://github.com/theislab/singlecell_proteomics).
 
@@ -8,7 +8,7 @@ We aim to provide the same analysis but in a way in which it falls in line with 
 
 ## What is the paper about? 📖
 
-**TLDR: new ultrasensitive singe-cell proteiomics experimantal method.**
+*TLDR: new ultrasensitive singe-cell proteiomics experimantal method.*
 
 The authors put forward ultrasensitive mass specrtometry (MS)-based workflow that allows to persicely and accurately quantify the proteome of single cells. To keep things short and sweet, here are the major selling points.
 
@@ -25,7 +25,7 @@ In a third section of the paper, the authors compare the proteomic data with the
 
 *Disclaimer: the following statement relfects my personal opinion and mine only ("my" referring to the author of this repo).*
 
-The papar spends a significant ammount of using their method test applications, only to confirm what is already thought to be known. I would have spent more effort and content on benchmarking the method.
+The papar spends a significant ammount of "space" demonstrating applications of their method, only to confirm what is currently already thought to be known. I would have spent more effort and content on benchmarking the method.
 
 ## Usage
 
