@@ -4,7 +4,7 @@ author: Santiago Castro Dau
 logo: docs/images/logo.png
 
 repository:
-    url: https://github.com/Sann5/USCPa
+    url: https://github.com/Sann5/ultra-prot
     branch: main
 
 html:
@@ -13,6 +13,6 @@ html:
     use_edit_page_button: true
     use_repository_button: true
     use_issues_button: true
-    baseurl: https://sann5.github.io/USCPa/
+    baseurl: https://github.com/Sann5/ultra-prot
 
 only_build_toc_files: true
