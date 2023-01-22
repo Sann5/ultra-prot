@@ -90,3 +90,6 @@ _build/
 
 # Data
 data/
+
+# Snakemake files
+.snakemake
