@@ -93,3 +93,6 @@ data/
 
 # Snakemake files
 .snakemake
+
+# Ignore resutls
+results/
