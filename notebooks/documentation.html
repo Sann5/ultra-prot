@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://github.com/Sann5/ultra-prot/notebooks/documentation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="1. Data Loading" href="TSP_cell_cycle_analysis.html" />
+    <link rel="prev" title="1. Original analyses" href="TSP_cell_cycle_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="TSP_cell_cycle_analysis.html">
-   1. Data Loading
+   1. Original analyses
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -483,83 +483,20 @@ title="Print to PDF"
 <span class="n">my_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;../data/preprocessed/other/CellCycleMarker.xlsx&#39;</span><span class="p">)</span>
 
 <span class="c1"># Get the first 5 rows of the DataFrame</span>
-<span class="n">my_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">my_df</span><span class="p">[</span><span class="s1">&#39;G1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>G1</th>
-      <th>Unnamed: 1</th>
-      <th>Unnamed: 2</th>
-      <th>Unnamed: 3</th>
-      <th>Unnamed: 4</th>
-      <th>S</th>
-      <th>Unnamed: 6</th>
-      <th>Unnamed: 7</th>
-      <th>Unnamed: 8</th>
-      <th>Unnamed: 9</th>
-      <th>G2M</th>
-      <th>Unnamed: 11</th>
-      <th>Unnamed: 12</th>
-      <th>Unnamed: 13</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Up</td>
-      <td>Fold-Change</td>
-      <td>Down</td>
-      <td>Fold-Change</td>
-      <td>NaN</td>
-      <td>Up</td>
-      <td>Fold-Change</td>
-      <td>Down</td>
-      <td>Fold-Change</td>
-      <td>NaN</td>
-      <td>Up</td>
-      <td>Fold-Change</td>
-      <td>Down</td>
-      <td>Fold-Change</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>MARCKS</td>
-      <td>1.490093</td>
-      <td>TOP2A</td>
-      <td>-1.725113</td>
-      <td>NaN</td>
-      <td>HTRA1</td>
-      <td>2.385513</td>
-      <td>MVP</td>
-      <td>-1.487999</td>
-      <td>NaN</td>
-      <td>TOP2A</td>
-      <td>2.443398</td>
-      <td>HTRA1</td>
-      <td>-1.937313</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        Up
+1    MARCKS
+2      LMO7
+3    EIF4A2
+4      KRT1
+Name: G1, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="figure-4d">
@@ -760,7 +697,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Data Loading</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Original analyses</p>
         </div>
     </a>
 </div>

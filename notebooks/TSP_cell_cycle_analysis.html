@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Data Loading</title>
+    <title>1. Original analyses</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Documentation" href="documentation.html" />
-    <link rel="prev" title="Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪" href="../README.html" />
+    <link rel="prev" title="Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analyses 🔬 🧬 💻 🧪" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Data Loading
+   1. Original analyses
   </a>
  </li>
  <li class="toctree-l1">
@@ -362,102 +362,107 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-loading">
+   1.1. Data Loading
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#true-single-cell-proteomics-cell-cycle-analysis">
-   1.1. True Single-Cell Proteomics - Cell Cycle Analysis
+   1.2. True Single-Cell Proteomics - Cell Cycle Analysis
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4c-total-protein-signal-per-cell-grouped-by-cell-cycle-stage">
-     1.1.1. Fig. 4C - Total protein signal per cell grouped by cell cycle stage
+     1.2.1. Fig. 4C - Total protein signal per cell grouped by cell cycle stage
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4d-principal-component-analysis">
-     1.1.2. Fig. 4D - Principal Component Analysis
+     1.2.2. Fig. 4D - Principal Component Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4e-cell-cycle-stage-prediction">
-     1.1.3. Fig. 4E - Cell cycle stage prediction
+     1.2.3. Fig. 4E - Cell cycle stage prediction
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#true-single-cell-proteomics-comparison-with-transcriptomics-data">
-   1.2. True Single-Cell Proteomics - Comparison with Transcriptomics Data
+   1.3. True Single-Cell Proteomics - Comparison with Transcriptomics Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5a-gene-expression-completeness-within-cells">
-     1.2.1. Fig. 5A - Gene expression completeness within cells
+     1.3.1. Fig. 5A - Gene expression completeness within cells
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5b-principal-component-analysis">
-     1.2.2. Fig. 5B - Principal Component Analysis
+     1.3.2. Fig. 5B - Principal Component Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5c-pearson-correlation-analysis">
-     1.2.3. Fig. 5C - Pearson Correlation Analysis
+     1.3.3. Fig. 5C - Pearson Correlation Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5d-variance-analysis">
-     1.2.4. Fig. 5D - Variance analysis
+     1.3.4. Fig. 5D - Variance analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5e-variance-comparison">
-     1.2.5. Fig. 5E - Variance comparison
+     1.3.5. Fig. 5E - Variance comparison
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#supplementary-analyses">
-   1.3. Supplementary Analyses
+   1.4. Supplementary Analyses
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#effect-of-local-regression-normalisation">
-     1.3.1. Effect of Local Regression Normalisation
+     1.4.1. Effect of Local Regression Normalisation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pca-including-untreated-cells">
-     1.3.2. PCA including untreated cells
+     1.4.2. PCA including untreated cells
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cell-cycle-stage-prediction">
-     1.3.3. Cell cycle stage prediction
+     1.4.3. Cell cycle stage prediction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-completeness">
-     1.3.4. Data completeness
+     1.4.4. Data completeness
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variance-analyses">
-     1.3.5. Variance analyses
+     1.4.5. Variance analyses
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#correlation-analyses">
-     1.3.6. Correlation analyses
+     1.4.6. Correlation analyses
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#abundance-value-distributions">
-     1.3.7. Abundance value distributions
+     1.4.7. Abundance value distributions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-before-and-after-filtering">
-     1.3.8. Data before and after filtering
+     1.4.8. Data before and after filtering
     </a>
    </li>
   </ul>
@@ -471,7 +476,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Loading</h1>
+                <h1>Original analyses</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -482,102 +487,107 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-loading">
+   1.1. Data Loading
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#true-single-cell-proteomics-cell-cycle-analysis">
-   1.1. True Single-Cell Proteomics - Cell Cycle Analysis
+   1.2. True Single-Cell Proteomics - Cell Cycle Analysis
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4c-total-protein-signal-per-cell-grouped-by-cell-cycle-stage">
-     1.1.1. Fig. 4C - Total protein signal per cell grouped by cell cycle stage
+     1.2.1. Fig. 4C - Total protein signal per cell grouped by cell cycle stage
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4d-principal-component-analysis">
-     1.1.2. Fig. 4D - Principal Component Analysis
+     1.2.2. Fig. 4D - Principal Component Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-4e-cell-cycle-stage-prediction">
-     1.1.3. Fig. 4E - Cell cycle stage prediction
+     1.2.3. Fig. 4E - Cell cycle stage prediction
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#true-single-cell-proteomics-comparison-with-transcriptomics-data">
-   1.2. True Single-Cell Proteomics - Comparison with Transcriptomics Data
+   1.3. True Single-Cell Proteomics - Comparison with Transcriptomics Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5a-gene-expression-completeness-within-cells">
-     1.2.1. Fig. 5A - Gene expression completeness within cells
+     1.3.1. Fig. 5A - Gene expression completeness within cells
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5b-principal-component-analysis">
-     1.2.2. Fig. 5B - Principal Component Analysis
+     1.3.2. Fig. 5B - Principal Component Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5c-pearson-correlation-analysis">
-     1.2.3. Fig. 5C - Pearson Correlation Analysis
+     1.3.3. Fig. 5C - Pearson Correlation Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5d-variance-analysis">
-     1.2.4. Fig. 5D - Variance analysis
+     1.3.4. Fig. 5D - Variance analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fig-5e-variance-comparison">
-     1.2.5. Fig. 5E - Variance comparison
+     1.3.5. Fig. 5E - Variance comparison
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#supplementary-analyses">
-   1.3. Supplementary Analyses
+   1.4. Supplementary Analyses
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#effect-of-local-regression-normalisation">
-     1.3.1. Effect of Local Regression Normalisation
+     1.4.1. Effect of Local Regression Normalisation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pca-including-untreated-cells">
-     1.3.2. PCA including untreated cells
+     1.4.2. PCA including untreated cells
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cell-cycle-stage-prediction">
-     1.3.3. Cell cycle stage prediction
+     1.4.3. Cell cycle stage prediction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-completeness">
-     1.3.4. Data completeness
+     1.4.4. Data completeness
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variance-analyses">
-     1.3.5. Variance analyses
+     1.4.5. Variance analyses
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#correlation-analyses">
-     1.3.6. Correlation analyses
+     1.4.6. Correlation analyses
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#abundance-value-distributions">
-     1.3.7. Abundance value distributions
+     1.4.7. Abundance value distributions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-before-and-after-filtering">
-     1.3.8. Data before and after filtering
+     1.4.8. Data before and after filtering
     </a>
    </li>
   </ul>
@@ -592,7 +602,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="original-analyses">
+<h1><span class="section-number">1. </span>Original analyses<a class="headerlink" href="#original-analyses" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>This notebook is an exact copy of the one in the <a class="reference external" href="https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb">repository</a> asocaited with the paper’s analyses. WE put it here just for comparison purposes.</p></li>
+<li><p>It wont run unless you put the data where its looking for it.</p></li>
+</ul>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">anndata</span>
 <span class="kn">import</span> <span class="nn">scanpy</span> <span class="k">as</span> <span class="nn">sc</span>
@@ -613,7 +629,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7950/4079999522.py:12: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7867/4079999522.py:12: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
   plt.style.use(&#39;seaborn-colorblind&#39;)
 </pre></div>
 </div>
@@ -641,8 +657,8 @@ Scanpy version: 1.9.1
 </div>
 </div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="data-loading">
-<h1><span class="section-number">1. </span>Data Loading<a class="headerlink" href="#data-loading" title="Permalink to this headline">#</a></h1>
+<section id="data-loading">
+<h2><span class="section-number">1.1. </span>Data Loading<a class="headerlink" href="#data-loading" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load raw protein dataset</span>
@@ -841,10 +857,11 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 </div>
+</section>
 <section id="true-single-cell-proteomics-cell-cycle-analysis">
-<h2><span class="section-number">1.1. </span>True Single-Cell Proteomics - Cell Cycle Analysis<a class="headerlink" href="#true-single-cell-proteomics-cell-cycle-analysis" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>True Single-Cell Proteomics - Cell Cycle Analysis<a class="headerlink" href="#true-single-cell-proteomics-cell-cycle-analysis" title="Permalink to this headline">#</a></h2>
 <section id="fig-4c-total-protein-signal-per-cell-grouped-by-cell-cycle-stage">
-<h3><span class="section-number">1.1.1. </span>Fig. 4C - Total protein signal per cell grouped by cell cycle stage<a class="headerlink" href="#fig-4c-total-protein-signal-per-cell-grouped-by-cell-cycle-stage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Fig. 4C - Total protein signal per cell grouped by cell cycle stage<a class="headerlink" href="#fig-4c-total-protein-signal-per-cell-grouped-by-cell-cycle-stage" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata_raw</span> <span class="o">=</span> <span class="n">adata_prot_raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -887,7 +904,7 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
   warnings.warn(
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_11_1.png" src="../_images/TSP_cell_cycle_analysis_11_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_12_1.png" src="../_images/TSP_cell_cycle_analysis_12_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -908,7 +925,7 @@ G2-M:	 n = 45,	 median = 9016382.0
 </div>
 </section>
 <section id="fig-4d-principal-component-analysis">
-<h3><span class="section-number">1.1.2. </span>Fig. 4D - Principal Component Analysis<a class="headerlink" href="#fig-4d-principal-component-analysis" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>Fig. 4D - Principal Component Analysis<a class="headerlink" href="#fig-4d-principal-component-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">impute_downshifted_normal_global</span><span class="p">(</span>
@@ -966,12 +983,12 @@ G2-M:	 n = 45,	 median = 9016382.0
 ... storing &#39;cell cycle stage&#39; as categorical
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_16_1.png" src="../_images/TSP_cell_cycle_analysis_16_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_17_1.png" src="../_images/TSP_cell_cycle_analysis_17_1.png" />
 </div>
 </div>
 </section>
 <section id="fig-4e-cell-cycle-stage-prediction">
-<h3><span class="section-number">1.1.3. </span>Fig. 4E - Cell cycle stage prediction<a class="headerlink" href="#fig-4e-cell-cycle-stage-prediction" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.3. </span>Fig. 4E - Cell cycle stage prediction<a class="headerlink" href="#fig-4e-cell-cycle-stage-prediction" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span> <span class="o">=</span> <span class="n">protein_adata</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1066,7 +1083,7 @@ G2M:	 TOP2A, HMGB1, EIF5B, TMSB10, EIF3D, ANP32A, RCC2, FASN, LUC7L2, AARS, KPNA
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_21_0.png" src="../_images/TSP_cell_cycle_analysis_21_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_22_0.png" src="../_images/TSP_cell_cycle_analysis_22_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1089,9 +1106,9 @@ AUC using the G1 score: 0.74
 </section>
 </section>
 <section id="true-single-cell-proteomics-comparison-with-transcriptomics-data">
-<h2><span class="section-number">1.2. </span>True Single-Cell Proteomics - Comparison with Transcriptomics Data<a class="headerlink" href="#true-single-cell-proteomics-comparison-with-transcriptomics-data" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.3. </span>True Single-Cell Proteomics - Comparison with Transcriptomics Data<a class="headerlink" href="#true-single-cell-proteomics-comparison-with-transcriptomics-data" title="Permalink to this headline">#</a></h2>
 <section id="fig-5a-gene-expression-completeness-within-cells">
-<h3><span class="section-number">1.2.1. </span>Fig. 5A - Gene expression completeness within cells<a class="headerlink" href="#fig-5a-gene-expression-completeness-within-cells" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.1. </span>Fig. 5A - Gene expression completeness within cells<a class="headerlink" href="#fig-5a-gene-expression-completeness-within-cells" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1144,12 +1161,12 @@ Drop-Seq	 (5022, 41161),	 mean completeness per cell: 0.07
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_27_0.png" src="../_images/TSP_cell_cycle_analysis_27_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_28_0.png" src="../_images/TSP_cell_cycle_analysis_28_0.png" />
 </div>
 </div>
 </section>
 <section id="fig-5b-principal-component-analysis">
-<h3><span class="section-number">1.2.2. </span>Fig. 5B - Principal Component Analysis<a class="headerlink" href="#fig-5b-principal-component-analysis" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.2. </span>Fig. 5B - Principal Component Analysis<a class="headerlink" href="#fig-5b-principal-component-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1234,12 +1251,12 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 ... storing &#39;dataset&#39; as categorical
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_31_1.png" src="../_images/TSP_cell_cycle_analysis_31_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_32_1.png" src="../_images/TSP_cell_cycle_analysis_32_1.png" />
 </div>
 </div>
 </section>
 <section id="fig-5c-pearson-correlation-analysis">
-<h3><span class="section-number">1.2.3. </span>Fig. 5C - Pearson Correlation Analysis<a class="headerlink" href="#fig-5c-pearson-correlation-analysis" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.3. </span>Fig. 5C - Pearson Correlation Analysis<a class="headerlink" href="#fig-5c-pearson-correlation-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1320,12 +1337,12 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_35_0.png" src="../_images/TSP_cell_cycle_analysis_35_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_36_0.png" src="../_images/TSP_cell_cycle_analysis_36_0.png" />
 </div>
 </div>
 </section>
 <section id="fig-5d-variance-analysis">
-<h3><span class="section-number">1.2.4. </span>Fig. 5D - Variance analysis<a class="headerlink" href="#fig-5d-variance-analysis" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.4. </span>Fig. 5D - Variance analysis<a class="headerlink" href="#fig-5d-variance-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span> <span class="o">=</span> <span class="n">protein_adata</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1384,12 +1401,12 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_38_0.png" src="../_images/TSP_cell_cycle_analysis_38_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_39_0.png" src="../_images/TSP_cell_cycle_analysis_39_0.png" />
 </div>
 </div>
 </section>
 <section id="fig-5e-variance-comparison">
-<h3><span class="section-number">1.2.5. </span>Fig. 5E - Variance comparison<a class="headerlink" href="#fig-5e-variance-comparison" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.5. </span>Fig. 5E - Variance comparison<a class="headerlink" href="#fig-5e-variance-comparison" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1448,15 +1465,15 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_41_0.png" src="../_images/TSP_cell_cycle_analysis_41_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_42_0.png" src="../_images/TSP_cell_cycle_analysis_42_0.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="supplementary-analyses">
-<h2><span class="section-number">1.3. </span>Supplementary Analyses<a class="headerlink" href="#supplementary-analyses" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4. </span>Supplementary Analyses<a class="headerlink" href="#supplementary-analyses" title="Permalink to this headline">#</a></h2>
 <section id="effect-of-local-regression-normalisation">
-<h3><span class="section-number">1.3.1. </span>Effect of Local Regression Normalisation<a class="headerlink" href="#effect-of-local-regression-normalisation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.1. </span>Effect of Local Regression Normalisation<a class="headerlink" href="#effect-of-local-regression-normalisation" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata_normalised</span> <span class="o">=</span> <span class="n">protein_adata</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1499,13 +1516,13 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_45_0.png" src="../_images/TSP_cell_cycle_analysis_45_0.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_45_1.png" src="../_images/TSP_cell_cycle_analysis_45_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_46_0.png" src="../_images/TSP_cell_cycle_analysis_46_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_46_1.png" src="../_images/TSP_cell_cycle_analysis_46_1.png" />
 </div>
 </div>
 </section>
 <section id="pca-including-untreated-cells">
-<h3><span class="section-number">1.3.2. </span>PCA including untreated cells<a class="headerlink" href="#pca-including-untreated-cells" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.2. </span>PCA including untreated cells<a class="headerlink" href="#pca-including-untreated-cells" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span> <span class="o">=</span> <span class="n">protein_adata</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1542,12 +1559,12 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 ... storing &#39;condition&#39; as categorical
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_48_1.png" src="../_images/TSP_cell_cycle_analysis_48_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_49_1.png" src="../_images/TSP_cell_cycle_analysis_49_1.png" />
 </div>
 </div>
 </section>
 <section id="cell-cycle-stage-prediction">
-<h3><span class="section-number">1.3.3. </span>Cell cycle stage prediction<a class="headerlink" href="#cell-cycle-stage-prediction" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.3. </span>Cell cycle stage prediction<a class="headerlink" href="#cell-cycle-stage-prediction" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span> <span class="o">=</span> <span class="n">protein_adata</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1648,7 +1665,7 @@ AUC using the S score: 0.35
 AUC using the G1 score: 0.67
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_53_1.png" src="../_images/TSP_cell_cycle_analysis_53_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_54_1.png" src="../_images/TSP_cell_cycle_analysis_54_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AUC using the G2-M score: 0.66
 </pre></div>
 </div>
@@ -1660,12 +1677,12 @@ AUC using the G1 score: 0.67
 AUC using the G1 score: 0.84
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_53_5.png" src="../_images/TSP_cell_cycle_analysis_53_5.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_54_5.png" src="../_images/TSP_cell_cycle_analysis_54_5.png" />
 </div>
 </div>
 </section>
 <section id="data-completeness">
-<h3><span class="section-number">1.3.4. </span>Data completeness<a class="headerlink" href="#data-completeness" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.4. </span>Data completeness<a class="headerlink" href="#data-completeness" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1718,7 +1735,7 @@ SMART-Seq2 (720, 2447)
 Drop-Seq (5022, 2447)
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_56_1.png" src="../_images/TSP_cell_cycle_analysis_56_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_57_1.png" src="../_images/TSP_cell_cycle_analysis_57_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1737,7 +1754,7 @@ Drop-Seq (5022, 2447)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_57_0.png" src="../_images/TSP_cell_cycle_analysis_57_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_58_0.png" src="../_images/TSP_cell_cycle_analysis_58_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1764,12 +1781,12 @@ Drop-Seq (5022, 2447)
   plt.plot(np.log(x2), 1-np.exp(-x2), c=&#39;black&#39;, label=&#39;expected poisson dropout&#39;)
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_58_1.png" src="../_images/TSP_cell_cycle_analysis_58_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_59_1.png" src="../_images/TSP_cell_cycle_analysis_59_1.png" />
 </div>
 </div>
 </section>
 <section id="variance-analyses">
-<h3><span class="section-number">1.3.5. </span>Variance analyses<a class="headerlink" href="#variance-analyses" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.5. </span>Variance analyses<a class="headerlink" href="#variance-analyses" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -1854,7 +1871,7 @@ Drop-Seq 7808.1196
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_61_0.png" src="../_images/TSP_cell_cycle_analysis_61_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_62_0.png" src="../_images/TSP_cell_cycle_analysis_62_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1908,9 +1925,9 @@ Drop-Seq 7808.1196
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_62_0.png" src="../_images/TSP_cell_cycle_analysis_62_0.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_62_1.png" src="../_images/TSP_cell_cycle_analysis_62_1.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_62_2.png" src="../_images/TSP_cell_cycle_analysis_62_2.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_63_0.png" src="../_images/TSP_cell_cycle_analysis_63_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_63_1.png" src="../_images/TSP_cell_cycle_analysis_63_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_63_2.png" src="../_images/TSP_cell_cycle_analysis_63_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1956,7 +1973,7 @@ Drop-Seq 7808.1196
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_64_0.png" src="../_images/TSP_cell_cycle_analysis_64_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_65_0.png" src="../_images/TSP_cell_cycle_analysis_65_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1971,9 +1988,9 @@ Drop-Seq 7808.1196
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_65_0.png" src="../_images/TSP_cell_cycle_analysis_65_0.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_65_1.png" src="../_images/TSP_cell_cycle_analysis_65_1.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_65_2.png" src="../_images/TSP_cell_cycle_analysis_65_2.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_66_0.png" src="../_images/TSP_cell_cycle_analysis_66_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_66_1.png" src="../_images/TSP_cell_cycle_analysis_66_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_66_2.png" src="../_images/TSP_cell_cycle_analysis_66_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1992,13 +2009,13 @@ Drop-Seq 7808.1196
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_66_0.png" src="../_images/TSP_cell_cycle_analysis_66_0.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_66_1.png" src="../_images/TSP_cell_cycle_analysis_66_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_67_0.png" src="../_images/TSP_cell_cycle_analysis_67_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_67_1.png" src="../_images/TSP_cell_cycle_analysis_67_1.png" />
 </div>
 </div>
 </section>
 <section id="correlation-analyses">
-<h3><span class="section-number">1.3.6. </span>Correlation analyses<a class="headerlink" href="#correlation-analyses" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.6. </span>Correlation analyses<a class="headerlink" href="#correlation-analyses" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2054,7 +2071,7 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
   warnings.warn(
 </pre></div>
 </div>
-<img alt="../_images/TSP_cell_cycle_analysis_69_1.png" src="../_images/TSP_cell_cycle_analysis_69_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_70_1.png" src="../_images/TSP_cell_cycle_analysis_70_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2087,7 +2104,7 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_70_0.png" src="../_images/TSP_cell_cycle_analysis_70_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_71_0.png" src="../_images/TSP_cell_cycle_analysis_71_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2120,12 +2137,12 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_71_0.png" src="../_images/TSP_cell_cycle_analysis_71_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_72_0.png" src="../_images/TSP_cell_cycle_analysis_72_0.png" />
 </div>
 </div>
 </section>
 <section id="abundance-value-distributions">
-<h3><span class="section-number">1.3.7. </span>Abundance value distributions<a class="headerlink" href="#abundance-value-distributions" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.7. </span>Abundance value distributions<a class="headerlink" href="#abundance-value-distributions" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2159,14 +2176,14 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/TSP_cell_cycle_analysis_74_0.png" src="../_images/TSP_cell_cycle_analysis_74_0.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_74_1.png" src="../_images/TSP_cell_cycle_analysis_74_1.png" />
-<img alt="../_images/TSP_cell_cycle_analysis_74_2.png" src="../_images/TSP_cell_cycle_analysis_74_2.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_75_0.png" src="../_images/TSP_cell_cycle_analysis_75_0.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_75_1.png" src="../_images/TSP_cell_cycle_analysis_75_1.png" />
+<img alt="../_images/TSP_cell_cycle_analysis_75_2.png" src="../_images/TSP_cell_cycle_analysis_75_2.png" />
 </div>
 </div>
 </section>
 <section id="data-before-and-after-filtering">
-<h3><span class="section-number">1.3.8. </span>Data before and after filtering<a class="headerlink" href="#data-before-and-after-filtering" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.8. </span>Data before and after filtering<a class="headerlink" href="#data-before-and-after-filtering" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -2263,7 +2280,7 @@ Observation names are not unique. To make them unique, call `.obs_names_make_uni
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪</p>
+            <p class="prev-next-title">Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analyses 🔬 🧬 💻 🧪</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="documentation.html" title="next page">

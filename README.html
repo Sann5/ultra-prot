@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪</title>
+    <title>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analyses 🔬 🧬 💻 🧪</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://github.com/Sann5/ultra-prot/README.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Data Loading" href="notebooks/TSP_cell_cycle_analysis.html" />
+    <link rel="next" title="1. Original analyses" href="notebooks/TSP_cell_cycle_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks/TSP_cell_cycle_analysis.html">
-   1. Data Loading
+   1. Original analyses
   </a>
  </li>
  <li class="toctree-l1">
@@ -332,8 +332,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-reproduce-the-analysis">
-   Why reproduce the analysis?
+  <a class="reference internal nav-link" href="#why-reproduce-the-analyses">
+   Why reproduce the analyses?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -372,13 +372,13 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-analysis">
-     Running the analysis
+    <a class="reference internal nav-link" href="#running-the-analyses">
+     Running the analyses
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#running-all-the-analysis">
-       Running all the analysis
+      <a class="reference internal nav-link" href="#running-all-the-analyses">
+       Running all the analyses
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -414,7 +414,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪</h1>
+                <h1>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analyses 🔬 🧬 💻 🧪</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -425,8 +425,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-reproduce-the-analysis">
-   Why reproduce the analysis?
+  <a class="reference internal nav-link" href="#why-reproduce-the-analyses">
+   Why reproduce the analyses?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -465,13 +465,13 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-the-analysis">
-     Running the analysis
+    <a class="reference internal nav-link" href="#running-the-analyses">
+     Running the analyses
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#running-all-the-analysis">
-       Running all the analysis
+      <a class="reference internal nav-link" href="#running-all-the-analyses">
+       Running all the analyses
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -508,12 +508,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analysis">
-<h1>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪<a class="headerlink" href="#ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analysis" title="Permalink to this headline">#</a></h1>
-<p>This repository contains a <strong>reproduction</strong> of the analysis made in <a class="reference external" href="https://doi.org/10.15252/msb.202110798">Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation</a>, A Brunner, …, M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the associated GitHub <a class="reference external" href="https://github.com/theislab/singlecell_proteomics">repository</a> (excluding the Supplementary Analyses).</p>
-<section id="why-reproduce-the-analysis">
-<h2>Why reproduce the analysis?<a class="headerlink" href="#why-reproduce-the-analysis" title="Permalink to this headline">#</a></h2>
-<p>We aim to provide the same analysis but in a way that falls in line with various standards and best practices. To restructure the analysis, the reproduction uses <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a>, a workflow management system that benefits from improved readability, portability, modularization, transparency, and scalability. Additionally, we tried to improve the repository organization and documentation.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analyses">
+<h1>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analyses 🔬 🧬 💻 🧪<a class="headerlink" href="#ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analyses" title="Permalink to this headline">#</a></h1>
+<p>This repository contains a <strong>reproduction</strong> of the analyses made in <a class="reference external" href="https://doi.org/10.15252/msb.202110798">Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation</a>, A Brunner, …, M Mann, Molecular Systems Biology (2022), specifically the analyses contained in the associated GitHub <a class="reference external" href="https://github.com/theislab/singlecell_proteomics">repository</a> (excluding the supplementary analyses).</p>
+<section id="why-reproduce-the-analyses">
+<h2>Why reproduce the analyses?<a class="headerlink" href="#why-reproduce-the-analyses" title="Permalink to this headline">#</a></h2>
+<p>We aim to provide the same analyses but in a way that falls in line with various standards and best practices. To restructure the analyses, the reproduction uses <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a>, a workflow management system that benefits from improved readability, portability, modularization, transparency, and scalability. Additionally, we tried to improve the repository organization and documentation.</p>
 </section>
 <section id="what-is-the-paper-about">
 <h2>What is the paper about? 📖<a class="headerlink" href="#what-is-the-paper-about" title="Permalink to this headline">#</a></h2>
@@ -568,7 +568,7 @@ title="Print to PDF"
 </section>
 <section id="where-does-the-data-come-from">
 <h3>Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permalink to this headline">#</a></h3>
-<p>For the analysis the authors used:</p>
+<p>For the analyses the authors used:</p>
 <ul class="simple">
 <li><p>Data generated by the experiments they present in the paper.</p>
 <ul>
@@ -598,11 +598,11 @@ title="Print to PDF"
 </li>
 </ul>
 </section>
-<section id="running-the-analysis">
-<h3>Running the analysis<a class="headerlink" href="#running-the-analysis" title="Permalink to this headline">#</a></h3>
-<p>Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in the paper represents a part of the analysis. The workflow generates each of the figures and saves them to the <span class="xref myst">results folder</span>. All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it. Just need to make sure the raw data is there before running it.</p>
-<section id="running-all-the-analysis">
-<h4>Running all the analysis<a class="headerlink" href="#running-all-the-analysis" title="Permalink to this headline">#</a></h4>
+<section id="running-the-analyses">
+<h3>Running the analyses<a class="headerlink" href="#running-the-analyses" title="Permalink to this headline">#</a></h3>
+<p>Thanks to Snakemake, running the entire workflow or individual parts is easy. Each figure in the paper represents one single analysis. The workflow generates each of the figures and saves them to the <span class="xref myst">results folder</span>. All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it. Just need to make sure the raw data is there before running it.</p>
+<section id="running-all-the-analyses">
+<h4>Running all the analyses<a class="headerlink" href="#running-all-the-analyses" title="Permalink to this headline">#</a></h4>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
@@ -671,7 +671,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="notebooks/TSP_cell_cycle_analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Data Loading</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Original analyses</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
