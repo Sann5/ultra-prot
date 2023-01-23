@@ -357,14 +357,43 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-this-repo">
+     Clone this repo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-an-environment">
      Create an environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+       Where does the data come from?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-the-analysis">
      Running the analysis
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-all-the-analysis">
+       Running all the analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-a-specific-figure">
+       Running a specific figure
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -381,6 +410,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#credits">
    Credits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
   </a>
  </li>
 </ul>
@@ -423,14 +457,43 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-this-repo">
+     Clone this repo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-an-environment">
      Create an environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-data">
+     Getting the data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+       Where does the data come from?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-the-analysis">
      Running the analysis
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-all-the-analysis">
+       Running all the analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-a-specific-figure">
+       Running a specific figure
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -449,6 +512,11 @@ title="Print to PDF"
    Credits
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -461,40 +529,115 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analysis">
 <h1>Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪<a class="headerlink" href="#ultra-high-sensitivity-mass-spectrometry-single-cell-proteome-analysis" title="Permalink to this headline">#</a></h1>
-<p>This repository contains a <strong>reproduction</strong> of the analysis made in <a class="reference external" href="https://doi.org/10.15252/msb.202110798">Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation</a>, A Brunner, …, M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the ascoiated GitHub <a class="reference external" href="https://github.com/theislab/singlecell_proteomics">repository</a>.</p>
+<p>This repository contains a <strong>reproduction</strong> of the analysis made in <a class="reference external" href="https://doi.org/10.15252/msb.202110798">Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation</a>, A Brunner, …, M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the associated GitHub <a class="reference external" href="https://github.com/theislab/singlecell_proteomics">repository</a> (excluding the Supplementary Analyses).</p>
 <section id="why-reproduce-the-analysis">
 <h2>Why reproduce the analysis?<a class="headerlink" href="#why-reproduce-the-analysis" title="Permalink to this headline">#</a></h2>
-<p>We aim to provide the same analysis but in a way in which it falls in line with various standards and best practices. To restructure the analysis, the reproduction uses <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a>, a workflow management system that benefits from improved readability, portability, modularization, transparency, scalability. Additionaly we tried to improve the repositary organization and documentation.</p>
+<p>We aim to provide the same analysis but in a way that falls in line with various standards and best practices. To restructure the analysis, the reproduction uses <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a>, a workflow management system that benefits from improved readability, portability, modularization, transparency, and scalability. Additionally, we tried to improve the repository organization and documentation.</p>
 </section>
 <section id="what-is-the-paper-about">
 <h2>What is the paper about? 📖<a class="headerlink" href="#what-is-the-paper-about" title="Permalink to this headline">#</a></h2>
-<p><em>TLDR: new ultrasensitive singe-cell proteiomics experimantal method.</em></p>
-<p>The authors put forward ultrasensitive mass specrtometry (MS)-based workflow that allows to persicely and accurately quantify the proteome of single cells. To keep things short and sweet, here are the major selling points.</p>
+<p><em>TLDR: new ultrasensitive single-cell proteomics experimental method.</em></p>
+<p>The authors put forward an ultrasensitive mass spectrometry (MS)-based workflow that allows precise and accurate quantification of the proteome of single cells. To keep things short and sweet, here are the major selling points.</p>
 <ul class="simple">
 <li><p>Ten-fold sensitivity increase.</p></li>
 <li><p>Injection of single cells one by one into the MS system allows true single-cell–derived proteomics.</p></li>
 </ul>
-<p>This last feature gives name to their invention; true single-cell–derived proteomics, or T-SCP.</p>
-<p>In the second part of the paper -after intoducing the techincal aspects fo thir methodology- the authors show that their method is powerful enough to expose differences in the proteome of cells in different stages of the cell cycle. To do so, they took cells from an inmortalized human cell line (HeLa cells) and treated different cell populations with different substances that would arrest the cell cylce at different stage. Then they used their method to analyze the proteome of individual cells of the different populations and analyze their differences.</p>
-<p>In a third section of the paper, the authors compare the proteomic data with the transcriptomic data of untreated cells of the same lineage. They analyze the expression distributions resulting from both technologies and conclude that the proteome exhibits notably distinct characteristics and therfore it cannot entirely be inferred from proteomic data. This idea supports the thesis that although the transcriptome gives way to the proteome, there are a lot of regulatiory mechanisms that take place in betweeen.</p>
+<p>This last feature gives a name to their invention; true single-cell–derived proteomics or T-SCP.</p>
+<p>In the second part of the paper -after introducing the technical aspects of their methodology- the authors show that their method is powerful enough to expose differences in the proteome of cells in different stages of the cell cycle. To do so, they took cells from an immortalized human cell line (HeLa cells) and treated different cell populations with different substances that would arrest the cell cycle at different stages. Then they used their method to analyze the proteome of individual cells of the different populations and analyze their differences.</p>
+<p>In the third section of the paper, the authors compare the proteomic data with the transcriptomic data of untreated cells of the same lineage. They analyze the expression distributions resulting from both technologies and conclude that the proteome exhibits notably distinct characteristics and therefore cannot entirely be inferred from proteomic data. This idea supports the thesis that although the transcriptome gives way to the proteome, there are a lot of regulatory mechanisms that take place in between.</p>
 </section>
 <section id="my-two-cents-on-the-paper">
 <h2>My two cents on the paper 🪙 🪙<a class="headerlink" href="#my-two-cents-on-the-paper" title="Permalink to this headline">#</a></h2>
-<p><em>Disclaimer: the following statement relfects my personal opinion and mine only (“my” referring to the author of this repo).</em></p>
-<p>The papar spends a significant ammount of “space” demonstrating applications of their method, only to confirm what is currently already thought to be known. I would have spent more effort and content on benchmarking the method.</p>
+<p><em>Disclaimer: the following statement reflects my personal opinion and mine only (“my” refers to the author of this repo).</em></p>
+<p>The paper spends a significant amount of “space” demonstrating applications of their method, only to confirm what is currently already thought to be known. I would have spent more effort and content on benchmarking the method.</p>
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
-<section id="create-an-environment">
-<h3>Create an environment<a class="headerlink" href="#create-an-environment" title="Permalink to this headline">#</a></h3>
-<p>Using a virtual environment is strongly recommended. If you use <a class="reference external" href="https://mamba.readthedocs.io/en/latest/">mamba</a> for example you can create an environment with the following command.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;choose_a_name&gt;<span class="w"> </span>--file<span class="w"> </span>environment.yaml
+<section id="clone-this-repo">
+<h3>Clone this repo<a class="headerlink" href="#clone-this-repo" title="Permalink to this headline">#</a></h3>
+<p>If you wich to contribute to this project, fork the repo instead of cloneing it.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Sann5/ultra-prot.git
 </pre></div>
 </div>
 </section>
+<section id="create-an-environment">
+<h3>Create an environment<a class="headerlink" href="#create-an-environment" title="Permalink to this headline">#</a></h3>
+<p>Using a virtual environment is strongly recommended. If you use <a class="reference external" href="https://mamba.readthedocs.io/en/latest/">mamba</a> you can create an environment with the following command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ultra-prot<span class="w"> </span>--file<span class="w"> </span>environment.yaml
+</pre></div>
+</div>
+<p>In case some pip dependencies failed to be installed via mama, just run the following command on your new <code class="docutils literal notranslate"><span class="pre">ultra-prot</span></code> environment.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="getting-the-data">
+<h3>Getting the data<a class="headerlink" href="#getting-the-data" title="Permalink to this headline">#</a></h3>
+<p>Download the raw data by running the following command. Be warned, doing so can take some time (around 20 minutes). Before you do so, make sure you are positioned at the root directory.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">pwd</span>
+&lt;location_of_your_clone&gt;/ultra-prot
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./src/download_raw.sh
+</pre></div>
+</div>
+<p>Alternatively, if you would like to download the proteomic and the transcriptomic data separately you can run the following commands.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./src/download_proteomic.sh
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./src/download_transcriptomic.sh
+</pre></div>
+</div>
+<section id="where-does-the-data-come-from">
+<h4>Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permalink to this headline">#</a></h4>
+<p>For the analysis the authors used:</p>
+<ul class="simple">
+<li><p>Data generated by the experiments they present in the paper.</p>
+<ul>
+<li><p><a class="reference external" href="https://www.ebi.ac.uk/pride/archive/projects/PXD024043">Web page of raw data</a> (file name: <code class="docutils literal notranslate"><span class="pre">DIANN1.8_SingleCells_CellCycle.7z</span></code>)</p></li>
+<li><p>Once you download the raw data you can find it in this <span class="xref myst">folder</span>.</p></li>
+<li><p>Once you run the workflow you can find the preprocessed data in this <span class="xref myst">folder</span>.</p></li>
+</ul>
+</li>
+<li><p>Annotation data that is provided with the original <a class="reference external" href="https://github.com/theislab/singlecell_proteomics">repository</a> (file names: <code class="docutils literal notranslate"><span class="pre">CellCycleMarker.xlsx</span></code> and <code class="docutils literal notranslate"><span class="pre">CoreProteome.txt</span></code>). Here you will find it in this <span class="xref myst">folder</span>.</p></li>
+<li><p>Transcriptomic data from two other studies.</p>
+<ul>
+<li><p><a class="reference external" href="https://doi.org/10.1371/journal.pone.0225466">HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129447">Web page of raw data</a></p></li>
+<li><p>Once downloade it, you can find the raw data in this <span class="xref myst">folder</span>.</p></li>
+<li><p>Once you run the workflow you can find the preprocessed data in this <span class="xref myst">folder</span> (file name: <code class="docutils literal notranslate"><span class="pre">GSM3713084_HeLa.h5ad</span></code>)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://doi.org/10.15252/msb.20209946">The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277">Web page of raw dataest 1</a>.</p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4226257">Web page of raw dataset 2</a>.</p></li>
+<li><p>Once downloaded you can find the raw data in this <span class="xref myst">folder</span> (file name: <code class="docutils literal notranslate"><span class="pre">GSM4226257_out_gene_exon_tagged.h5ad</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
 <section id="running-the-analysis">
 <h3>Running the analysis<a class="headerlink" href="#running-the-analysis" title="Permalink to this headline">#</a></h3>
-<p>TODO…</p>
+<p>Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in tha paper represents a part of the analysis. The worlkflow generates each of the figures and saves them to the <span class="xref myst">results folder</span>. All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it.</p>
+<section id="running-all-the-analysis">
+<h4>Running all the analysis<a class="headerlink" href="#running-all-the-analysis" title="Permalink to this headline">#</a></h4>
+<p>You can always adjust the number of cores according to your computational resources.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="running-a-specific-figure">
+<h4>Running a specific figure<a class="headerlink" href="#running-a-specific-figure" title="Permalink to this headline">#</a></h4>
+<p>The following figures are considered and therefore valid for input: <code class="docutils literal notranslate"><span class="pre">fig_4c</span> <span class="pre">fig_4d</span> <span class="pre">fig_4e</span> <span class="pre">fig_5c</span> <span class="pre">fig_5d</span> <span class="pre">fig_5e</span> <span class="pre">fig_5a</span> <span class="pre">fig_5b</span></code>. You can check the source code for each figue in <code class="docutils literal notranslate"><span class="pre">src/fig_*.py</span></code>. For example if we wanted to run generate only figure 4d we would run the following command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">1</span><span class="w"> </span>fig_4d
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 <section id="contributing">
@@ -508,6 +651,15 @@ title="Print to PDF"
 <section id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">#</a></h2>
 <p>This project was created using a template from the <a class="reference external" href="https://worldbank.github.io/template/README.html">World Bank Development Data Group</a></p>
+</section>
+<section id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>[] Make Docker</p></li>
+<li><p>[] Pimp docuemntation</p></li>
+<li><p>[] Do we ned the raw data for snakemake to run? check and comment in <a class="reference external" href="http://README.md">README.md</a></p></li>
+<li><p>[] Add imporve on list in the contribute section.</p></li>
+</ul>
 </section>
 <div class="toctree-wrapper compound">
 </div>
