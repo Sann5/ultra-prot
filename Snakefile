@@ -3,10 +3,10 @@ SUBPLOT = ["c", "d", "e"]
 SUBPLOT_2 = ["a", "b"]
 
 rule all:
-    input: 
+    input:
         expand("results/fig_{plot}{subplot}.png", plot=PLOT, subplot=SUBPLOT),
         expand("results/fig_5{subplot}.png", subplot=SUBPLOT_2)
-        
+
 rule preprocess_proteomic:
     input:
         "data/raw/proteomic/{sample}.tsv"
@@ -52,8 +52,8 @@ rule fig_4d:
     output:
         "results/fig_4d.png"
     script:
-        "src/fig_4d.py"     
-        
+        "src/fig_4d.py"
+
 rule fig_4e:
     input:
         "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Make dir 
+# Make dir
 mkdir -p data/raw/proteomic
 cd data/raw/proteomic
 

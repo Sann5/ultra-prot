@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import pyplot_settings
 
 full_data = {
-    'Proteins': anndata.read_h5ad(filename=snakemake.input[0]), 
-    'SMART-Seq2': anndata.read_h5ad(filename=snakemake.input[1]),
-    'Drop-Seq': anndata.read_h5ad(filename=snakemake.input[2]),
+    "Proteins": anndata.read_h5ad(filename=snakemake.input[0]),
+    "SMART-Seq2": anndata.read_h5ad(filename=snakemake.input[1]),
+    "Drop-Seq": anndata.read_h5ad(filename=snakemake.input[2]),
 }
 
 for adata in full_data.values():
@@ -19,5 +19,5 @@ for datasetname, adata in full_data.items():
     perc_expr += list((adata.X > 0).mean(axis=1))
     dataset_name += [datasetname] * adata.X.shape[0]
 sns.violinplot(y=perc_expr, x=dataset_name)
-plt.ylabel('Gene/Protein expression completeness per cell')
-plt.savefig(snakemake.output[0], bbox_inches='tight')
+plt.ylabel("Gene/Protein expression completeness per cell")
+plt.savefig(snakemake.output[0], bbox_inches="tight")
