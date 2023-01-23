@@ -21,7 +21,7 @@ In the second part of the paper -after intoducing the techincal aspects fo thir 
 
 In a third section of the paper, the authors compare the proteomic data with the transcriptomic data of untreated cells of the same lineage. They analyze the expression distributions resulting from both technologies and conclude that the proteome exhibits notably distinct characteristics and therfore it cannot entirely be inferred from proteomic data. This idea supports the thesis that although the transcriptome gives way to the proteome, there are a lot of regulatiory mechanisms that take place in betweeen.
 
-## My Two Cents on The Paper 🪙 🪙
+## My two cents on the paper 🪙 🪙
 
 *Disclaimer: the following statement relfects my personal opinion and mine only ("my" referring to the author of this repo).*
 
@@ -29,7 +29,7 @@ The papar spends a significant ammount of "space" demonstrating applications of 
 
 ## Usage
 
-### Create an Environment
+### Create an environment
 
 Using a virtual environment is strongly recommended. If you use [mamba](https://mamba.readthedocs.io/en/latest/) for example you can create an environment with the following command.
 
@@ -37,7 +37,7 @@ Using a virtual environment is strongly recommended. If you use [mamba](https://
 mamba env create --name <choose_a_name> --file environment.yaml
 ```
 
-### Running the Analysis
+### Running the analysis
 
 TODO...
 
