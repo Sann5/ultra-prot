@@ -218,7 +218,7 @@ dependencies:
     - contourpy==1.0.7
     - cycler==0.11.0
     - cytoolz==0.12.1
-    - datalab==0.1.0
+    - datalab==1.0.0
     - et-xmlfile==1.1.0
     - flake8==6.0.0
     - fonttools==4.38.0
