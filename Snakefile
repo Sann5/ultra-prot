@@ -36,4 +36,70 @@ rule fig_4c:
         "results/fig_4c.png"
     script:
         "src/fig_4c.py"
+
+rule fig_4d:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad"
+    output:
+        "results/fig_4d.png"
+    script:
+        "src/fig_4d.py"     
         
+rule fig_4e:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/other/CellCycleMarker.xlsx"
+    output:
+        "results/fig_4e.png"
+    script:
+        "src/fig_4e.py"
+
+rule fig_5b:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/transcriptomic/GSM3713084_HeLa.h5ad",
+        "data/preprocessed/transcriptomic/GSM4226257_out_gene_exon_tagged.h5ad"
+    output:
+        "results/fig_5b.png"
+    script:
+        "src/fig_5b.py"
+
+rule fig_5a:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/transcriptomic/GSM3713084_HeLa.h5ad",
+        "data/preprocessed/transcriptomic/GSM4226257_out_gene_exon_tagged.h5ad"
+    output:
+        "results/fig_5a.png"
+    script:
+        "src/fig_5a.py"
+
+rule fig_5c:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/transcriptomic/GSM3713084_HeLa.h5ad",
+        "data/preprocessed/transcriptomic/GSM4226257_out_gene_exon_tagged.h5ad"
+    output:
+        "results/fig_5c.png"
+    script:
+        "src/fig_5c.py"
+
+rule fig_5d:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/other/CoreProteome.txt"
+    output:
+        "results/fig_5d.png"
+    script:
+        "src/fig_5d.py"
+
+rule fig_5e:
+    input:
+        "data/preprocessed/proteomic/20210919_DIANN_SingleCellOutput.pg_matrix_cellcyclepred.h5ad",
+        "data/preprocessed/transcriptomic/GSM3713084_HeLa.h5ad",
+        "data/preprocessed/transcriptomic/GSM4226257_out_gene_exon_tagged.h5ad",
+        "data/preprocessed/other/CoreProteome.txt"
+    output:
+        "results/fig_5e.png"
+    script:
+        "src/fig_5e.py"
