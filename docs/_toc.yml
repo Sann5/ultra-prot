@@ -5,15 +5,13 @@ parts:
   - caption: Examples
     numbered: True
     chapters:
-    - file: notebooks/world-bank-api.ipynb
-    - file: notebooks/world-bank-package.ipynb
+    - file: notebooks/TSP_cell_cycle_analysis.ipynb
+    - file: notebooks/documentation.ipynb
   - caption: Additional Resources
     chapters:
-      - url: https://datapartnership.org
-        title: Development Data Partnership
-      - url: https://wbdatalab.org
-        title: World Bank Data Lab
-      - url: https://www.worldbank.org/en/about/unit/unit-dec
-        title: World Bank DEC
-      - url: https://www.worldbank.org/en/research/dime
-        title: World Bank DIME
+      - url: https://doi.org/10.15252/msb.202110798
+        title: Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation
+      - url: https://doi.org/10.1371/journal.pone.0225466
+        title: HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019
+      - url: https://doi.org/10.15252/msb.20209946
+        title: The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020
