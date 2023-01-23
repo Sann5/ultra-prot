@@ -90,7 +90,8 @@ _build/
 
 # Data
 data/raw
-
+data/preprocessed/transcriptomic
+data/preprocessed/proteomic
 
 # Snakemake files
 .snakemake
