@@ -4,11 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import sklearn.metrics
-
-plt.style.use('seaborn-colorblind')
-plt.rc('xtick', labelsize=11)
-plt.rc('ytick', labelsize=11)
-plt.rcParams.update({'font.size': 11})
+import pyplot_settings
 
 adata = anndata.read_h5ad(filename=snakemake.input[0])
 sc.pp.filter_cells(adata, min_genes=600)

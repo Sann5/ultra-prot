@@ -2,11 +2,7 @@ import anndata
 import scanpy as sc
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-plt.style.use('seaborn-colorblind')
-plt.rc('xtick', labelsize=11)
-plt.rc('ytick', labelsize=11)
-plt.rcParams.update({'font.size': 11})
+import pyplot_settings
 
 full_data = {
     'Proteins': anndata.read_h5ad(filename=snakemake.input[0]), 

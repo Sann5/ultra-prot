@@ -3,10 +3,7 @@ import scanpy as sc
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-plt.style.use('seaborn-colorblind')
-plt.rc('xtick', labelsize=11)
-plt.rc('ytick', labelsize=11)
+import pyplot_settings
 plt.rcParams.update({'font.size': 11})
 
 adata_raw = anndata.read_h5ad(filename=snakemake.input[0])

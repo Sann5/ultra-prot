@@ -2,11 +2,7 @@ import anndata
 import scanpy as sc
 import numpy as np
 import matplotlib.pyplot as plt
-
-plt.style.use('seaborn-colorblind')
-plt.rc('xtick', labelsize=11)
-plt.rc('ytick', labelsize=11)
-plt.rcParams.update({'font.size': 11})
+import pyplot_settings
 
 def impute_downshifted_normal_global(
         adata,

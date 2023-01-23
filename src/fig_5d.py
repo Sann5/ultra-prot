@@ -4,21 +4,9 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-from matplotlib.colors import ListedColormap
 import scipy 
-import sklearn.metrics
-
-plt.style.use('seaborn-colorblind')
-plt.rc('xtick', labelsize=11)
-plt.rc('ytick', labelsize=11)
-plt.rcParams.update({'font.size': 11})
-
-top = cm.get_cmap('Blues_r', 128)
-bottom = cm.get_cmap('Oranges', 128)
-newcolors = np.vstack((top(np.linspace(0, 1, 128)),
-                       bottom(np.linspace(0, 1, 128))))
-newcmp = ListedColormap(newcolors, name='OrangeBlue')
+import pyplot_settings
+from pyplot_settings import color
 
 adata = anndata.read_h5ad(filename=snakemake.input[0])
 sc.pp.filter_cells(adata, min_genes=600)
@@ -26,10 +14,6 @@ sc.pp.filter_genes(adata, min_cells=0.15 * adata.shape[0])
 
 core_proteins = list(pd.read_csv(snakemake.input[1], sep='\t')['Genes'])
 
-color = {
-    'Core proteome genes': newcmp(.85),
-    'Other proteins': newcmp(0.15)
-}
 adata.var['core/noncore'] = [
     'Core proteome genes' if prot in core_proteins 
     else 'Other proteins' 
