@@ -31,7 +31,7 @@ The paper spends a significant amount of "space" demonstrating applications of t
 
 ### Clone this repo
 
-If you wich to contribute to this project, fork the repo instead of cloneing it.
+If you wish to contribute to this project, fork the repo instead of cloning it.
 
 ```sh
 git clone git@github.com:Sann5/ultra-prot.git
@@ -39,16 +39,10 @@ git clone git@github.com:Sann5/ultra-prot.git
 
 ### Create an environment
 
-Using a virtual environment is strongly recommended. If you use [mamba](https://mamba.readthedocs.io/en/latest/) you can create an environment with the following command.
+Using a virtual environment is strongly recommended. If you use `conda` you can create an environment with the following command.
 
 ```sh
-mamba env create --name ultra-prot --file environment.yaml
-```
-
-In case some pip dependencies failed to be installed via mama, just run the following command on your new `ultra-prot` environment.
-
-```sh
-pip install requirements.txt
+conda env create -n ultra -f environment.yml
 ```
 
 ### Getting the data
@@ -74,7 +68,7 @@ Alternatively, if you would like to download the proteomic and the transcriptomi
 ./src/download_transcriptomic.sh
 ```
 
-#### Where does the data come from?
+### Where does the data come from?
 
 For the analysis the authors used:
 
@@ -86,28 +80,28 @@ For the analysis the authors used:
 - Transcriptomic data from two other studies.
   - [HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019](https://doi.org/10.1371/journal.pone.0225466)
     - [Web page of raw data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129447)
-    - Once downloade it, you can find the raw data in this [folder](data/raw/transcriptomic/study_1).
+    - Once downloaded you can find the raw data in this [folder](data/raw/transcriptomic/study_1).
     - Once you run the workflow you can find the preprocessed data in this [folder](.github/data/preprocessed/transcriptomic) (file name: `GSM3713084_HeLa.h5ad`)
   - [The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020](https://doi.org/10.15252/msb.20209946)
-    - [Web page of raw dataest 1](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277).
+    - [Web page of raw dataset 1](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277).
     - [Web page of raw dataset 2](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4226257).
     - Once downloaded you can find the raw data in this [folder](data/raw/transcriptomic/study_2) (file name: `GSM4226257_out_gene_exon_tagged.h5ad`).
 
 ### Running the analysis
 
-Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in tha paper represents a part of the analysis. The worlkflow generates each of the figures and saves them to the [results folder](.github/results). All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it.
+Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in the paper represents a part of the analysis. The workflow generates each of the figures and saves them to the [results folder](.github/results). All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it. Just need to make sure the raw data is there before running it.
 
 #### Running all the analysis
-
-You can always adjust the number of cores according to your computational resources.
 
 ```sh
 snakemake --cores 1
 ```
 
+*You can always adjust the number of cores according to your computational resources.*
+
 #### Running a specific figure
 
-The following figures are considered and therefore valid for input: `fig_4c fig_4d fig_4e fig_5c fig_5d fig_5e fig_5a fig_5b`. You can check the source code for each figue in `src/fig_*.py`. For example if we wanted to run generate only figure 4d we would run the following command.
+The following figures are considered and therefore valid for input: `fig_4c fig_4d fig_4e fig_5c fig_5d fig_5e fig_5a fig_5b`. You can check the source code for each figure in `src/fig_*.py`. For example, if we wanted to run generate only figure 4d we would run the following command.
 
 ```sh
 snakemake --cores 1 fig_4d
@@ -115,7 +109,12 @@ snakemake --cores 1 fig_4d
 
 ## Contributing
 
-Check [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+Check [CONTRIBUTING.md](.github/CONTRIBUTING.md) for our contributing guidelines and values. If you would like to contribute but don't know exactly what, here are a few ideas:
+
+- [ ] Parametrize the workflow with [Snakemake's config file mechanism](https://snakemake.readthedocs.io/en/stable/tutorial/advanced.html#step-2-config-files).
+- [ ] Make appropriate documentation for each of the analyses entailed by each of the figures ([this documentation is just an example](.github/notebooks/documentation.ipynb)).
+- [ ] Extend the workflow such that it also includes the figures in the supplementary material of the paper.
+- [ ] Add dome unit and integration [tests](.github/tests).
 
 ## Getting support
 
@@ -123,11 +122,4 @@ Check [SUPPORT.md](.github/SUPPORT.md).
 
 ## Credits
 
-This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html)
-
-## TODO
-
-- [] Make Docker
-- [] Pimp docuemntation
-- [] Do we ned the raw data for snakemake to run? check and comment in README.md
-- [] Add imporve on list in the contribute section.
+This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html). All the analyses are almost exact copies of the code in [this notebook](https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb).
