@@ -89,7 +89,7 @@ target/
 _build/
 
 # Data
-data/raw/
+data/
 
 # Snakemake files
 .snakemake
