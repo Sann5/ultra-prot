@@ -1,3 +1,12 @@
+PLOT = [4,5]
+SUBPLOT = ["c", "d", "e"]
+SUBPLOT_2 = ["a", "b"]
+
+rule all:
+    input: 
+        expand("results/fig_{plot}{subplot}.png", plot=PLOT, subplot=SUBPLOT),
+        expand("results/fig_5{subplot}.png", subplot=SUBPLOT_2)
+        
 rule preprocess_proteomic:
     input:
         "data/raw/proteomic/{sample}.tsv"
