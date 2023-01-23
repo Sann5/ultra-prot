@@ -29,6 +29,8 @@ The paper spends a significant amount of "space" demonstrating applications of t
 
 ## Usage
 
+You will need `conda`, `git` and `pip` installed in your computer.
+
 ### Clone this repo
 
 If you wish to contribute to this project, fork the repo instead of cloning it.
@@ -42,7 +44,7 @@ git clone git@github.com:Sann5/ultra-prot.git
 Using a virtual environment is strongly recommended. If you use `conda` you can create an environment with the following command.
 
 ```sh
-conda env create -n ultra -f environment.yml
+conda env create -n ultra-prot python=3.9 -f environment.yml
 ```
 
 ### Getting the data
@@ -122,4 +124,6 @@ Check [SUPPORT.md](.github/SUPPORT.md).
 
 ## Credits
 
-This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html). All the analyses are almost exact copies of the code in [this notebook](https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb).
+- This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html).
+- All the analyses are almost exact copies of the code in [this notebook](https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb).
+- Logo downloaded from [here](https://favpng.com/png_view/cells-icon-single-cell-sequencing-clip-art-mitosis-cytokinesis-cell-division-png/jg6yPfYZ).
