@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://github.com/Sann5/ultra-prot/README.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Indicators Example" href="notebooks/world-bank-api.html" />
+    <link rel="next" title="1. Data Loading" href="notebooks/TSP_cell_cycle_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,13 +110,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/world-bank-api.html">
-   1. Indicators Example
+  <a class="reference internal" href="notebooks/TSP_cell_cycle_analysis.html">
+   1. Data Loading
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/world-bank-package.html">
-   2. Package Example
+  <a class="reference internal" href="notebooks/documentation.html">
+   2. Documentation
   </a>
  </li>
 </ul>
@@ -127,23 +127,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference external" href="https://datapartnership.org">
-   Development Data Partnership
+  <a class="reference external" href="https://doi.org/10.15252/msb.202110798">
+   Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://wbdatalab.org">
-   World Bank Data Lab
+  <a class="reference external" href="https://doi.org/10.1371/journal.pone.0225466">
+   HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://www.worldbank.org/en/about/unit/unit-dec">
-   World Bank DEC
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://www.worldbank.org/en/research/dime">
-   World Bank DIME
+  <a class="reference external" href="https://doi.org/10.15252/msb.20209946">
+   The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020
   </a>
  </li>
 </ul>
@@ -370,13 +365,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#getting-the-data">
      Getting the data
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#where-does-the-data-come-from">
-       Where does the data come from?
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+     Where does the data come from?
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-the-analysis">
@@ -410,11 +403,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#credits">
    Credits
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo">
-   TODO
   </a>
  </li>
 </ul>
@@ -470,13 +458,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#getting-the-data">
      Getting the data
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#where-does-the-data-come-from">
-       Where does the data come from?
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+     Where does the data come from?
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-the-analysis">
@@ -510,11 +496,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#credits">
    Credits
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo">
-   TODO
   </a>
  </li>
 </ul>
@@ -555,19 +536,15 @@ title="Print to PDF"
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
 <section id="clone-this-repo">
 <h3>Clone this repo<a class="headerlink" href="#clone-this-repo" title="Permalink to this headline">#</a></h3>
-<p>If you wich to contribute to this project, fork the repo instead of cloneing it.</p>
+<p>If you wish to contribute to this project, fork the repo instead of cloning it.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Sann5/ultra-prot.git
 </pre></div>
 </div>
 </section>
 <section id="create-an-environment">
 <h3>Create an environment<a class="headerlink" href="#create-an-environment" title="Permalink to this headline">#</a></h3>
-<p>Using a virtual environment is strongly recommended. If you use <a class="reference external" href="https://mamba.readthedocs.io/en/latest/">mamba</a> you can create an environment with the following command.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ultra-prot<span class="w"> </span>--file<span class="w"> </span>environment.yaml
-</pre></div>
-</div>
-<p>In case some pip dependencies failed to be installed via mama, just run the following command on your new <code class="docutils literal notranslate"><span class="pre">ultra-prot</span></code> environment.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>requirements.txt
+<p>Using a virtual environment is strongly recommended. If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can create an environment with the following command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ultra<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
 </div>
 </section>
@@ -588,8 +565,9 @@ title="Print to PDF"
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./src/download_transcriptomic.sh
 </pre></div>
 </div>
+</section>
 <section id="where-does-the-data-come-from">
-<h4>Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permalink to this headline">#</a></h4>
+<h3>Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permalink to this headline">#</a></h3>
 <p>For the analysis the authors used:</p>
 <ul class="simple">
 <li><p>Data generated by the experiments they present in the paper.</p>
@@ -605,13 +583,13 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://doi.org/10.1371/journal.pone.0225466">HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019</a></p>
 <ul>
 <li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129447">Web page of raw data</a></p></li>
-<li><p>Once downloade it, you can find the raw data in this <span class="xref myst">folder</span>.</p></li>
+<li><p>Once downloaded you can find the raw data in this <span class="xref myst">folder</span>.</p></li>
 <li><p>Once you run the workflow you can find the preprocessed data in this <span class="xref myst">folder</span> (file name: <code class="docutils literal notranslate"><span class="pre">GSM3713084_HeLa.h5ad</span></code>)</p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="https://doi.org/10.15252/msb.20209946">The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020</a></p>
 <ul>
-<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277">Web page of raw dataest 1</a>.</p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277">Web page of raw dataset 1</a>.</p></li>
 <li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4226257">Web page of raw dataset 2</a>.</p></li>
 <li><p>Once downloaded you can find the raw data in this <span class="xref myst">folder</span> (file name: <code class="docutils literal notranslate"><span class="pre">GSM4226257_out_gene_exon_tagged.h5ad</span></code>).</p></li>
 </ul>
@@ -620,20 +598,19 @@ title="Print to PDF"
 </li>
 </ul>
 </section>
-</section>
 <section id="running-the-analysis">
 <h3>Running the analysis<a class="headerlink" href="#running-the-analysis" title="Permalink to this headline">#</a></h3>
-<p>Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in tha paper represents a part of the analysis. The worlkflow generates each of the figures and saves them to the <span class="xref myst">results folder</span>. All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it.</p>
+<p>Thanks to Snakemake, running the entire analysis or individual parts is easy. Each figure in the paper represents a part of the analysis. The workflow generates each of the figures and saves them to the <span class="xref myst">results folder</span>. All the preprocessing will be managed by Snakemake, so there is no need to explicitly run it. Just need to make sure the raw data is there before running it.</p>
 <section id="running-all-the-analysis">
 <h4>Running all the analysis<a class="headerlink" href="#running-all-the-analysis" title="Permalink to this headline">#</a></h4>
-<p>You can always adjust the number of cores according to your computational resources.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
+<p><em>You can always adjust the number of cores according to your computational resources.</em></p>
 </section>
 <section id="running-a-specific-figure">
 <h4>Running a specific figure<a class="headerlink" href="#running-a-specific-figure" title="Permalink to this headline">#</a></h4>
-<p>The following figures are considered and therefore valid for input: <code class="docutils literal notranslate"><span class="pre">fig_4c</span> <span class="pre">fig_4d</span> <span class="pre">fig_4e</span> <span class="pre">fig_5c</span> <span class="pre">fig_5d</span> <span class="pre">fig_5e</span> <span class="pre">fig_5a</span> <span class="pre">fig_5b</span></code>. You can check the source code for each figue in <code class="docutils literal notranslate"><span class="pre">src/fig_*.py</span></code>. For example if we wanted to run generate only figure 4d we would run the following command.</p>
+<p>The following figures are considered and therefore valid for input: <code class="docutils literal notranslate"><span class="pre">fig_4c</span> <span class="pre">fig_4d</span> <span class="pre">fig_4e</span> <span class="pre">fig_5c</span> <span class="pre">fig_5d</span> <span class="pre">fig_5e</span> <span class="pre">fig_5a</span> <span class="pre">fig_5b</span></code>. You can check the source code for each figure in <code class="docutils literal notranslate"><span class="pre">src/fig_*.py</span></code>. For example, if we wanted to run generate only figure 4d we would run the following command.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">1</span><span class="w"> </span>fig_4d
 </pre></div>
 </div>
@@ -642,7 +619,13 @@ title="Print to PDF"
 </section>
 <section id="contributing">
 <h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h2>
-<p>Check <span class="xref myst">CONTRIBUTING.md</span>.</p>
+<p>Check <span class="xref myst">CONTRIBUTING.md</span> for our contributing guidelines and values. If you would like to contribute but don’t know exactly what, here are a few ideas:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Parametrize the workflow with <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/tutorial/advanced.html#step-2-config-files">Snakemake’s config file mechanism</a>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make appropriate documentation for each of the analyses entailed by each of the figures (<span class="xref myst">this documentation is just an example</span>).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Extend the workflow such that it also includes the figures in the supplementary material of the paper.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add dome unit and integration <span class="xref myst">tests</span>.</p></li>
+</ul>
 </section>
 <section id="getting-support">
 <h2>Getting support<a class="headerlink" href="#getting-support" title="Permalink to this headline">#</a></h2>
@@ -650,16 +633,7 @@ title="Print to PDF"
 </section>
 <section id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">#</a></h2>
-<p>This project was created using a template from the <a class="reference external" href="https://worldbank.github.io/template/README.html">World Bank Development Data Group</a></p>
-</section>
-<section id="todo">
-<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>[] Make Docker</p></li>
-<li><p>[] Pimp docuemntation</p></li>
-<li><p>[] Do we ned the raw data for snakemake to run? check and comment in <a class="reference external" href="http://README.md">README.md</a></p></li>
-<li><p>[] Add imporve on list in the contribute section.</p></li>
-</ul>
+<p>This project was created using a template from the <a class="reference external" href="https://worldbank.github.io/template/README.html">World Bank Development Data Group</a>. All the analyses are almost exact copies of the code in <a class="reference external" href="https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb">this notebook</a>.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -694,10 +668,10 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="notebooks/world-bank-api.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/TSP_cell_cycle_analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Indicators Example</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Data Loading</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
