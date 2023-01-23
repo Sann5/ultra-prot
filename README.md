@@ -1,31 +1,31 @@
 # Ultra-high Sensitivity Mass Spectrometry Single-Cell Proteome Analysis 🔬 🧬 💻 🧪
 
-This repository contains a **reproduction** of the analysis made in [Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation](https://doi.org/10.15252/msb.202110798), A Brunner, ..., M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the ascoiated GitHub [repository](https://github.com/theislab/singlecell_proteomics).
+This repository contains a **reproduction** of the analysis made in [Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation](https://doi.org/10.15252/msb.202110798), A Brunner, ..., M Mann, Molecular Systems Biology (2022), specifically the analysis contained in the associated GitHub [repository](https://github.com/theislab/singlecell_proteomics) (excluding the Supplementary Analyses).
 
 ## Why reproduce the analysis?
 
-We aim to provide the same analysis but in a way in which it falls in line with various standards and best practices. To restructure the analysis, the reproduction uses [Snakemake](https://snakemake.readthedocs.io/en/stable/), a workflow management system that benefits from improved readability, portability, modularization, transparency, scalability. Additionaly we tried to improve the repositary organization and documentation.
+We aim to provide the same analysis but in a way that falls in line with various standards and best practices. To restructure the analysis, the reproduction uses [Snakemake](https://snakemake.readthedocs.io/en/stable/), a workflow management system that benefits from improved readability, portability, modularization, transparency, and scalability. Additionally, we tried to improve the repository organization and documentation.
 
 ## What is the paper about? 📖
 
-*TLDR: new ultrasensitive singe-cell proteiomics experimantal method.*
+*TLDR: new ultrasensitive single-cell proteomics experimental method.*
 
-The authors put forward ultrasensitive mass specrtometry (MS)-based workflow that allows to persicely and accurately quantify the proteome of single cells. To keep things short and sweet, here are the major selling points.
+The authors put forward an ultrasensitive mass spectrometry (MS)-based workflow that allows precise and accurate quantification of the proteome of single cells. To keep things short and sweet, here are the major selling points.
 
 - Ten-fold sensitivity increase.
 - Injection of single cells one by one into the MS system allows true single-cell–derived proteomics.
 
-This last feature gives name to their invention; true single-cell–derived proteomics, or T-SCP.
+This last feature gives a name to their invention; true single-cell–derived proteomics or T-SCP.
 
-In the second part of the paper -after intoducing the techincal aspects fo thir methodology- the authors show that their method is powerful enough to expose differences in the proteome of cells in different stages of the cell cycle. To do so, they took cells from an inmortalized human cell line (HeLa cells) and treated different cell populations with different substances that would arrest the cell cylce at different stage. Then they used their method to analyze the proteome of individual cells of the different populations and analyze their differences.  
+In the second part of the paper -after introducing the technical aspects of their methodology- the authors show that their method is powerful enough to expose differences in the proteome of cells in different stages of the cell cycle. To do so, they took cells from an immortalized human cell line (HeLa cells) and treated different cell populations with different substances that would arrest the cell cycle at different stages. Then they used their method to analyze the proteome of individual cells of the different populations and analyze their differences.
 
-In a third section of the paper, the authors compare the proteomic data with the transcriptomic data of untreated cells of the same lineage. They analyze the expression distributions resulting from both technologies and conclude that the proteome exhibits notably distinct characteristics and therfore it cannot entirely be inferred from proteomic data. This idea supports the thesis that although the transcriptome gives way to the proteome, there are a lot of regulatiory mechanisms that take place in betweeen.
+In the third section of the paper, the authors compare the proteomic data with the transcriptomic data of untreated cells of the same lineage. They analyze the expression distributions resulting from both technologies and conclude that the proteome exhibits notably distinct characteristics and therefore cannot entirely be inferred from proteomic data. This idea supports the thesis that although the transcriptome gives way to the proteome, there are a lot of regulatory mechanisms that take place in between.
 
 ## My two cents on the paper 🪙 🪙
 
-*Disclaimer: the following statement relfects my personal opinion and mine only ("my" referring to the author of this repo).*
+*Disclaimer: the following statement reflects my personal opinion and mine only ("my" refers to the author of this repo).*
 
-The papar spends a significant ammount of "space" demonstrating applications of their method, only to confirm what is currently already thought to be known. I would have spent more effort and content on benchmarking the method.
+The paper spends a significant amount of "space" demonstrating applications of their method, only to confirm what is currently already thought to be known. I would have spent more effort and content on benchmarking the method.
 
 ## Usage
 
@@ -34,12 +34,74 @@ The papar spends a significant ammount of "space" demonstrating applications of 
 Using a virtual environment is strongly recommended. If you use [mamba](https://mamba.readthedocs.io/en/latest/) for example you can create an environment with the following command.
 
 ```sh
-mamba env create --name <choose_a_name> --file environment.yaml
+mamba env create --name ultra-prot --file environment.yaml
 ```
+
+In case some pip dependencies failed to be installed via mama, just run the following command on your new `ultra-prot` environment.
+
+```sh
+pip install requirements.txt
+```
+
+### Getting the data
+
+The preprocessed data is readily available within the repo. If you wish to download the raw data you can do so by running the following command. Be warned doing so can take some time (around 20 minutes). Before you do so make sure you are positioned at the root directory.
+
+```sh
+$ pwd
+<location_of_your_clone>/ultra-prot
+```
+
+```sh
+./src/download_raw.sh
+```
+
+Alternatively, if you would like to download the proteomic and the transcriptomic data separately you can run the following command respectively.
+
+```sh
+./src/download_proteomic.sh
+```
+
+```sh
+./src/download_transcriptomic.sh
+```
+
+#### Where does the data come from?
+
+For the analysis the authors used:
+
+- Data generated by the experiments they present in the paper.
+  - Raw [data](https://www.ebi.ac.uk/pride/archive/projects/PXD024043) (file name: `DIANN1.8_SingleCells_CellCycle.7z`)
+  - Preprocessed [data](.github/data/preprocessed/proteomic)
+- [Annotation data](.github/data/preprocessed/other) that is provided with the original [repository](https://github.com/theislab/singlecell_proteomics).
+- Transcriptomic data from two other studies:
+  - [HeLa-CCL2 cell heterogeneity studied by single-cell DNA and RNA sequencing. PLoS One 2019](https://doi.org/10.1371/journal.pone.0225466)
+    - Raw [data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129447)
+    - Preprocessed [data](.github/data/preprocessed/transcriptomic) (file name: `GSM3713084_HeLa.h5ad`)
+  - [The transcriptome dynamics of single cells during the cell cycle. Mol Syst Biol 2020](https://doi.org/10.15252/msb.20209946)
+    - Raw [dataset 1](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142277)
+    - Raw [dataset 2](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4226257)
+    - Preprocessed [data](.github/data/preprocessed/transcriptomic) (file name: `GSM4226257_out_gene_exon_tagged.h5ad`)
 
 ### Running the analysis
 
-TODO...
+Thanks to Snakemake, running the entire analysis or individual parts is easy. Each part of the analysis is represented by a figure wich is the output of the analysis and will be saved to the `results/` folder. All the preprocessing will be managed by Snakemake in case you are running the analysis from the raw data.
+
+#### Running all the analysis
+
+You can always adjust the number of cores according to your computational resources.
+
+```sh
+snakemake --cores 1
+```
+
+#### Running a specific figure
+
+The following figures are considered and therefore valid for input: `fig_4c fig_4d fig_4e fig_5c fig_5d fig_5e fig_5a fig_5b`
+
+```sh
+snakemake --cores 1 fig_4d
+```
 
 ## Contributing
 
@@ -52,3 +114,9 @@ Check [SUPPORT.md](.github/SUPPORT.md).
 ## Credits
 
 This project was created using a template from the [World Bank Development Data Group](https://worldbank.github.io/template/README.html)
+
+## TODO
+
+- [] Make Docker
+- [] Pimp docuemntation
+- [] Do wee ned the raw dat for snakemake to run? check and comment in README.md
