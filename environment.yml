@@ -218,7 +218,7 @@ dependencies:
     - contourpy==1.0.7
     - cycler==0.11.0
     - cytoolz==0.12.1
-    - datalab==1.0.0
+    - datalab
     - et-xmlfile==1.1.0
     - flake8==6.0.0
     - fonttools==4.38.0
@@ -245,7 +245,7 @@ dependencies:
     - scanpy==1.9.1
     - scikit-learn==1.2.0
     - scipy==1.10.0
-    - seaborn==0.12.2
+    - seaborn
     - session-info==1.0.0
     - sklearn==0.0.post1
     - statsmodels==0.13.5
