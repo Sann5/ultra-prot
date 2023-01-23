@@ -228,7 +228,7 @@ dependencies:
     - llvmlite==0.39.1
     - matplotlib==3.6.3
     - mccabe==0.7.0
-    - mypy==1.0.0+dev.cc1bcc9c35ed018d59596f6d75a70a5d8b8c1805
+    - mypy==0.991
     - mypy-extensions==0.4.3
     - natsort==8.2.0
     - networkx==3.0
