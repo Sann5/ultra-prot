@@ -2,7 +2,7 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Examples
+  - caption: Notebooks
     numbered: True
     chapters:
     - file: notebooks/TSP_cell_cycle_analysis.ipynb
