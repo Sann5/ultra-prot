@@ -125,7 +125,7 @@ Check [CONTRIBUTING.md](https://github.com/Sann5/ultra-prot/blob/main/CONTRIBUTI
 - [ ] Parametrize the workflow with [Snakemake's config file mechanism](https://snakemake.readthedocs.io/en/stable/tutorial/advanced.html#step-2-config-files).
 - [ ] Make appropriate documentation for each of the analyses entailed by each of the figures ([this documentation is just an example](https://sann5.github.io/ultra-prot/notebooks/documentation.html)).
 - [ ] Extend the workflow such that it also includes the figures in the supplementary material of the paper.
-- [ ] Add dome unit and integration [tests](https://github.com/Sann5/ultra-prot/tree/main/tests).
+- [ ] Add unit and integration [tests](https://github.com/Sann5/ultra-prot/tree/main/tests).
 
 ## Getting support
 
