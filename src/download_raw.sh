@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./download_proteomic.sh
-./download_transcriptomic.sh
+source ./src/download_proteomic.sh
+source ./src/download_transcriptomic.sh
