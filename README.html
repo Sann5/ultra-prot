@@ -534,6 +534,7 @@ title="Print to PDF"
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<p>You will need <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda</a>, and <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a> installed in your computer.</p>
 <section id="clone-this-repo">
 <h3>Clone this repo<a class="headerlink" href="#clone-this-repo" title="Permalink to this headline">#</a></h3>
 <p>If you wish to contribute to this project, fork the repo instead of cloning it.</p>
@@ -543,8 +544,14 @@ title="Print to PDF"
 </section>
 <section id="create-an-environment">
 <h3>Create an environment<a class="headerlink" href="#create-an-environment" title="Permalink to this headline">#</a></h3>
-<p>Using a virtual environment is strongly recommended. If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can create an environment with the following command.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ultra<span class="w"> </span>-f<span class="w"> </span>environment.yml
+<p>Using a virtual environment is strongly recommended. If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can create an environment with the following command. Before you do place yourself at the root of the repo.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ultra-prot
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ultra-prot<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ultra-prot
 </pre></div>
 </div>
 </section>
@@ -622,7 +629,7 @@ title="Print to PDF"
 <p>Check <span class="xref myst">CONTRIBUTING.md</span> for our contributing guidelines and values. If you would like to contribute but don’t know exactly what, here are a few ideas:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Parametrize the workflow with <a class="reference external" href="https://snakemake.readthedocs.io/en/stable/tutorial/advanced.html#step-2-config-files">Snakemake’s config file mechanism</a>.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make appropriate documentation for each of the analyses entailed by each of the figures (<span class="xref myst">this documentation is just an example</span>).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make appropriate documentation for each of the analyses entailed by each of the figures (<a class="reference internal" href="notebooks/documentation.html"><span class="doc std std-doc">this documentation is just an example</span></a>).</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Extend the workflow such that it also includes the figures in the supplementary material of the paper.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add dome unit and integration <span class="xref myst">tests</span>.</p></li>
 </ul>
@@ -633,7 +640,11 @@ title="Print to PDF"
 </section>
 <section id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">#</a></h2>
-<p>This project was created using a template from the <a class="reference external" href="https://worldbank.github.io/template/README.html">World Bank Development Data Group</a>. All the analyses are almost exact copies of the code in <a class="reference external" href="https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb">this notebook</a>.</p>
+<ul class="simple">
+<li><p>This project was created using a template from the <a class="reference external" href="https://worldbank.github.io/template/README.html">World Bank Development Data Group</a>.</p></li>
+<li><p>All the analyses are almost exact copies of the code in <a class="reference external" href="https://github.com/theislab/singlecell_proteomics/blob/main/TSP_cell_cycle_analysis.ipynb">this notebook</a>.</p></li>
+<li><p>Logo downloaded from <a class="reference external" href="https://favpng.com/png_view/cells-icon-single-cell-sequencing-clip-art-mitosis-cytokinesis-cell-division-png/jg6yPfYZ">here</a>.</p></li>
+</ul>
 </section>
 <div class="toctree-wrapper compound">
 </div>
